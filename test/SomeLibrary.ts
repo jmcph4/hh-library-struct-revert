@@ -56,7 +56,8 @@ describe("SomeLibrary", async () => {
                     n: BigNumber.from(5),
                 };
 
-                expect(actualStruct).to.equal(expectedStruct);
+                expect(actualStruct.arr.toString()).to.equal(expectedStruct.arr.toString());
+                expect(actualStruct.n).to.equal(expectedStruct.n);
             })
         })
     })
