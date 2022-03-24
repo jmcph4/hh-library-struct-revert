@@ -43,5 +43,22 @@ describe("SomeLibrary", async () => {
             })
         })
     })
+
+    describe("bar", async () => {
+        context("When called", async () => {
+            it("Succeeds", async () => {
+                const someNum: BigNumber = BigNumber.from(4);
+
+                const actualStruct = await library.bar(someNum);
+
+                const expectedStruct = {
+                    arr: [],
+                    n: BigNumber.from(5),
+                };
+
+                expect(actualStruct).to.equal(expectedStruct);
+            })
+        })
+    })
 })
 

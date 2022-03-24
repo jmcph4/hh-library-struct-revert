@@ -13,4 +13,9 @@ library SomeLibrary {
         uint256[] memory xs;
         return MyNaughtyStruct(xs, 0);
     }
+
+    function bar(uint256 x) public pure returns (MyNaughtyStruct memory) {
+        uint256[] memory xs;
+        return MyNaughtyStruct(xs, x + 1);
+    }
 }
